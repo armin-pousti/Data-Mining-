@@ -15,13 +15,7 @@ Fisman, D. N., & Soucy, J.-P. R. (2021). A sub-national real-time epidemiologica
 COVID-19 pandemic in Canada. Scientific Data, 8(1). doi: https://doi.org/10.1038/s41597-021-00955-2 """
 
 def preprocessing():
-        """
-    Preprocessing retrieves data on deaths, cases, completed tests, and hospitalization for COVID-19in Canada from an
-    API endpoint. It creates a data frame for each of the data sets, and after cleansing the individual data frames
-    from unnecessary columns, it merges all the data frames to create a huge data frame containing all the necessary
-    information on COVID19 data.
-    :return: <class 'pandas.core.frame.DataFrame'> Returns the processed DataFrame (df_combined)
-    """
+
     # Creating a DataFrame for completed tests for COVID19 in Canada
     completedTest_url = "https://api.opencovid.ca/timeseries?stat=tests_completed&geo=can&fill=false&version=true&pt_names=short&hr_names=hruid&legacy=false&fmt=csv"
     response = requests.get(completedTest_url)
